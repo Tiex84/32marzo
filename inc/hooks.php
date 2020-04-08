@@ -25,25 +25,17 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 	 */
 	function understrap_add_site_info() {
 		$the_theme = wp_get_theme();
+		$anno = date('Y');
 
 		$site_info = sprintf(
-			'<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s(%4$s)',
-			esc_url( __( 'http://wordpress.org/', 'understrap' ) ),
+			'<span class="copyrights">@ %1$s</span> %2$s <span class="sep"> | </span>%3$s',
+			$anno,
+			esc_html__( ' Trentaduemarzo srl', 'understrap' ),
 			sprintf(
 				/* translators:*/
-				esc_html__( 'Proudly powered by %s', 'understrap' ),
-				'WordPress'
-			),
-			sprintf( // WPCS: XSS ok.
-				/* translators:*/
-				esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ),
-				$the_theme->get( 'Name' ),
-				'<a href="' . esc_url( __( 'http://understrap.com', 'understrap' ) ) . '">understrap.com</a>'
-			),
-			sprintf( // WPCS: XSS ok.
-				/* translators:*/
-				esc_html__( 'Version: %1$s', 'understrap' ),
-				$the_theme->get( 'Version' )
+				esc_html__( 'Realizzato con %1s & %2s', 'understrap' ),
+				'<i class="fa fa-heart text-secondary"></i>',
+				'<i class="fa fa-wordpress text-secondary" aria-hidden="true"></i>'
 			)
 		);
 

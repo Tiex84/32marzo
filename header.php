@@ -22,6 +22,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
+
+<!-- Google Tag Manager -->
+<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
+<!-- Fine Google Tag Manager -->
+
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
@@ -30,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+		<nav class="navbar navbar-expand-md bg-primary">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">

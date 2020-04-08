@@ -1,0 +1,19 @@
+.hero {
+    background: #f4f7fa;
+    color: #35495c;
+    padding-top: 5.5rem;    
+    .subtitle {
+        color: #7a8188;
+        font-size: 1.2rem;
+        display: inline-block;
+        margin-bottom: .6rem;
+    }
+    h1 {
+        font-weight: 700;
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,31 @@
+.navbar {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .navbar-nav {
+        li {
+            background: none;
+            margin: 0 0 0 10px;
+            &:last-child {
+                font-family: 'PT Sans',sans-serif;
+                text-transform: uppercase;
+                a {
+                    position: relative;
+                    top: -1px;
+                    padding: .5rem .7rem;
+                    border: 2px solid #fff;
+                }
+            }
+
+            a {
+                color: $white;
+                font-size: .93rem;
+                &:hover {
+                    color: rgba(255,255,255,.5);
+                }
+            }
+        }
+    }
+
+}
+
